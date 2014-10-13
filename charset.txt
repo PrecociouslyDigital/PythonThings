@@ -1,0 +1,3 @@
+alphabet ABCDEFGHIJKLMNOPQRSTUVWXYZ
+alphabet_plus_punctuation,numbers ABCDEFGHIJKLMNOPQRSTUVWXYZ;:"'<>,.?/\|[]{}!@#$%^&*()+=-_1234567890
+alphabet_plus_numbers ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890
