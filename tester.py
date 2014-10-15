@@ -18,6 +18,9 @@ while charsets:
     print "Correct!\n"
   else:
     charsets.append(test)
-    wrongs.append(test[1])
+    if wrongs:
+      if not any(test[1] in wrongs):
+	wrongs.append(test[1])
     print "Wrong: Correct answer was " + test[1]
     
+print "Missed: " + str(wrongs)
