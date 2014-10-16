@@ -10,17 +10,17 @@ for line in fileinput.input(raw_input("file?\n")):
 charsets.reverse()
 #print charsets
 surround = charsets.pop()
+random.shuffle(charsets)
 while charsets:
-  random.shuffle(charsets)
   test = charsets.pop()
   print surround[0] +" "+ test[0] +" "+ surround[1] +"\n"
   if test[1] == raw_input():
     print "Correct!\n"
   else:
     charsets.append(test)
-    if wrongs:
-      if not any(test[1] in wrongs):
-	wrongs.append(test[1])
+    random.shuffle(charsets)
+    if wrongs.count(test[1]) == 0:
+      wrongs.append(test[1])
     print "Wrong: Correct answer was " + test[1]
     
 print "Missed: " + str(wrongs)
