@@ -8,7 +8,7 @@ for line in fileinput.input(raw_input("file?\n")):
   line[1] = line[1].rstrip("\n")
   charsets.append(line)
 charsets.reverse()
-print charsets
+#print charsets
 surround = charsets.pop()
 while charsets:
   random.shuffle(charsets)

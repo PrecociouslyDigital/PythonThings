@@ -41,5 +41,5 @@ base = random.randint(0,14) + base
 working = int(raw_input("Can you tell me what f(" + str(base) + ") is?"))
 print(convert(working, base))
 output = format(convert(working, base))
-print(output)
+print output
 raw_input("okay?")
