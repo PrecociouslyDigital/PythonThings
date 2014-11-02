@@ -13,21 +13,22 @@ def beep():
 		os.system('play --no-show-progress --null --channels 1 synth %s sine %f' % ( 1, 300))	
 	elif sys.platform.startswith("win"):
 		winsound.beep(300,1)
-for i in xrange(157578377,2147483647):
+for i in xrange(100,2147483647):
 	works = 1
 	for (r,m) in secretz:
-  		if i%m != r:
+  		if (200009*i+158045)%m != r:
     			#print str(130*i+191) +  "doesn't work for" + str(r) + "," + str(m)
 			works = 0
 			break
 		else:
 			if m not in done:
 				done.append(m)
-				print str(i) + " mod " + str(m) + " is " + str(r) + " and all of the above"
+				print str(200009*i+158045) + " mod " + str(m) + " is " + str(r) + " and all of the above"
 				beep()
 
 	if works == 1:
 		print str(i) + "works"
 		beep()
 		break
+print "Done!"
 beep()
